@@ -6,6 +6,7 @@ RUN curl --create-dirs -sSLo /usr/share/jenkins/slave.jar http://repo.jenkins-ci
   && chmod 755 /usr/share/jenkins \
   && chmod 644 /usr/share/jenkins/slave.jar
 
+RUN npm install -g serverless@0.5.6
 COPY jenkins-slave /usr/local/bin/jenkins-slave
 
 RUN chmod a+rwx /home/jenkins
